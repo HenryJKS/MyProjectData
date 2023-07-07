@@ -1,0 +1,20 @@
+-- SELECT com variáveis
+
+DECLARE
+@CPF VARCHAR(50),
+@NOME VARCHAR(100),
+@DATA_NASCIMENTO DATE,
+@IDADE INT;
+
+SET @CPF = '2600586709';
+
+-- Usando as variaveis no SELECT
+-- Atribuindo valores para @NOME, @DATA_NASCIMENTO, @IDADE com valores das tabelas.
+-- Na condição buscando o CPF que seja igual a @CPF
+SELECT @NOME = NOME, @DATA_NASCIMENTO = [DATA DE NASCIMENTO], @IDADE = IDADE 
+FROM [TABELA DE CLIENTES] WHERE CPF = @CPF;
+
+PRINT @NOME;
+PRINT @DATA_NASCIMENTO
+PRINT @IDADE
+

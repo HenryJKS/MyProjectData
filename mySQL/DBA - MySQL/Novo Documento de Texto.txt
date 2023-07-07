@@ -1,0 +1,5 @@
+alter table (nome_table) add index (nome_coluna)
+
+alter table (nome_table) drop index (nome_coluna)
+
+show indexes from nometabela;

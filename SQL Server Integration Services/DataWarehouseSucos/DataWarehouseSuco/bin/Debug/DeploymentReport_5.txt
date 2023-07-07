@@ -1,0 +1,31 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Dim_Tempo]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Dim_Tempo].[Nome_Semestre] is being dropped, data loss could occur.
+
+** User actions
+     Table rebuild
+       [dbo].[Dim_Tempo] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_Fato_001_Dim_Dia] (Foreign Key)
+       [dbo].[FK_Fato_002_Dim_Dia] (Foreign Key)
+       [dbo].[FK_Fato_003_Dim_Dia] (Foreign Key)
+       [dbo].[FK_Fato_004_Dim_Dia] (Foreign Key)
+       [dbo].[FK_Fato_005_Dim_Dia] (Foreign Key)
+     Create
+       [dbo].[FK_Fato_001_Dim_Dia] (Foreign Key)
+       [dbo].[FK_Fato_002_Dim_Dia] (Foreign Key)
+       [dbo].[FK_Fato_003_Dim_Dia] (Foreign Key)
+       [dbo].[FK_Fato_004_Dim_Dia] (Foreign Key)
+       [dbo].[FK_Fato_005_Dim_Dia] (Foreign Key)
+
+The compatibility level of the target schema 160 is not supported, which may result in undefined behavior. Please upgrade to a later version which supports this compatibility level.
+The column [dbo].[Dim_Tempo].[Nome_Semestre] is being dropped, data loss could occur.
+

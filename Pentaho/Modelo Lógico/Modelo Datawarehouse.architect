@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.9">
+ <project-name>Modelo Datawarehouse</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="PlayPen Database" />
+  </data-source>
+  <data-source id="DS2">
+   <property key="Connection Type" value="MySQL" />
+   <property key="Logical" value="Datawarehouse" />
+   <property key="JDBC URL" value="jdbc:mysql://localhost:3306/" />
+   <property key="UID" value="root" />
+   <property key="PWD" value="jooji@123" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+  <database id="DB0" populated="true" UUID="f3710c81-e90b-4644-bcc1-7b88a22c819e" dbcs-ref="DS2" name="Datawarehouse" physicalName="Datawarehouse" >
+   <catalog id="CAT1" populated="true" UUID="c33fb7c2-b447-4a19-93eb-1368c61b8117" name="dwsucos" nativeTerm="database" physicalName="dwsucos" >
+    <table id="TAB2" populated="false" UUID="a24ee115-9046-4ed0-b9f0-267c28e270cc" name="dim_categoria" objectType="TABLE" physicalName="dim_categoria" >
+     <remarks></remarks>
+     <folder id="FOLTAB21" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX3" populated="true" UUID="f712ac58-cd88-4496-9585-73792209cb32" clustered="false" name="dim_categoria_pk" physicalName="dim_categoria_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB4" populated="false" UUID="62554349-4fd8-4bee-b132-61400e2bdd70" name="dim_cliente" objectType="TABLE" physicalName="dim_cliente" >
+     <remarks>Tabela da dimensão cliente</remarks>
+     <folder id="FOLTAB41" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX5" populated="true" UUID="d9f1717a-4a0a-4b6b-b4e8-6770df4075a2" clustered="false" name="dim_cliente_pk" physicalName="dim_cliente_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB6" populated="false" UUID="d16c2c3b-84d6-4b8f-accb-d5d29eb0a3a4" name="dim_fabrica" objectType="TABLE" physicalName="dim_fabrica" >
+     <remarks>Tabela de dimensão Fábrica</remarks>
+     <folder id="FOLTAB61" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX7" populated="true" UUID="5aa70a45-0971-41be-8557-8f6dbd070177" clustered="false" name="dim_fabrica_pk" physicalName="dim_fabrica_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB8" populated="false" UUID="47720a2b-6848-4750-8ed1-cf5b47169d67" name="dim_marca" objectType="TABLE" physicalName="dim_marca" >
+     <remarks></remarks>
+     <folder id="FOLTAB81" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX9" populated="true" UUID="4f849c62-34c7-4f34-923f-9c5ac3801f47" clustered="false" name="dim_marca_pk" physicalName="dim_marca_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB10" populated="false" UUID="09c6d784-50fc-4507-ab5f-a7cc35142869" name="dim_organizacional" objectType="TABLE" physicalName="dim_organizacional" >
+     <remarks></remarks>
+     <folder id="FOLTAB101" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX11" populated="true" UUID="75207dab-b4a9-41e2-b5a5-ba1c907307fd" clustered="false" name="dim_organizacional_pk" physicalName="dim_organizacional_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB12" populated="false" UUID="bb60dfc4-73b2-438f-abab-1e4083673fcb" name="dim_produto" objectType="TABLE" physicalName="dim_produto" >
+     <remarks></remarks>
+     <folder id="FOLTAB121" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX13" populated="true" UUID="c6d45f17-40a3-4920-a4eb-4d9b7f50b872" clustered="false" name="dim_produto_pk" physicalName="dim_produto_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB14" populated="false" UUID="b4200e25-275f-4c2c-a1c2-48c9b67701ce" name="dim_tempo" objectType="TABLE" physicalName="dim_tempo" >
+     <remarks></remarks>
+     <folder id="FOLTAB141" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX15" populated="true" UUID="7a912ed4-4a8d-4421-8c39-29942a8f9647" clustered="false" name="dim_tempo_pk" physicalName="dim_tempo_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB16" populated="false" UUID="5fcaa4d4-b06e-47f1-a098-306bf9c1df1a" name="fato_001" objectType="TABLE" physicalName="fato_001" >
+     <remarks></remarks>
+     <folder id="FOLTAB161" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX17" populated="true" UUID="e9dcda8e-f41c-4657-835d-a60ffc9ea184" clustered="false" name="fato_001_pk" physicalName="fato_001_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB18" populated="false" UUID="1ddb51fa-b3c9-4b9c-943a-704c815ec173" name="fato_002" objectType="TABLE" physicalName="fato_002" >
+     <remarks></remarks>
+     <folder id="FOLTAB181" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX19" populated="true" UUID="d9c3fb14-ac5b-4a47-9cfe-8c81a11f3a52" clustered="false" name="fato_002_pk" physicalName="fato_002_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB20" populated="false" UUID="7320329d-1123-4685-bfc8-c491cfb2dd94" name="fato_003" objectType="TABLE" physicalName="fato_003" >
+     <remarks></remarks>
+     <folder id="FOLTAB201" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX21" populated="true" UUID="6ae73915-197b-4eaf-a8b5-0ad7db67c346" clustered="false" name="fato_003_pk" physicalName="fato_003_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB22" populated="false" UUID="5cc54c50-4672-4b8c-a45b-a5afb3c3f8d5" name="fato_004" objectType="TABLE" physicalName="fato_004" >
+     <remarks></remarks>
+     <folder id="FOLTAB221" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX23" populated="true" UUID="753f2a20-a4a9-4318-be1a-b6c7896bbb83" clustered="false" name="fato_004_pk" physicalName="fato_004_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB24" populated="false" UUID="ae6e133e-fb8e-4e50-a9d3-68aaea0bed70" name="fato_005" objectType="TABLE" physicalName="fato_005" >
+     <remarks></remarks>
+     <folder id="FOLTAB241" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX25" populated="true" UUID="26beccd1-8da9-4568-9bc4-4145b1946383" clustered="false" name="fato_005_pk" physicalName="fato_005_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+   </catalog>
+   <catalog id="CAT26" populated="false" UUID="d6bc6205-ce56-4172-9474-497ceb07b4fc" name="information_schema" nativeTerm="database" physicalName="information_schema" >
+   </catalog>
+   <catalog id="CAT27" populated="false" UUID="4faa3445-a0e7-422e-94de-03b520fa7041" name="library" nativeTerm="database" physicalName="library" >
+   </catalog>
+   <catalog id="CAT28" populated="false" UUID="733ecc4d-1961-4c6d-b3b0-3a2722884fa3" name="mysql" nativeTerm="database" physicalName="mysql" >
+   </catalog>
+   <catalog id="CAT29" populated="false" UUID="f8596688-8bcb-4bd7-b3fb-6bcd3428992c" name="performance_schema" nativeTerm="database" physicalName="performance_schema" >
+   </catalog>
+   <catalog id="CAT30" populated="false" UUID="098ba0ce-1933-4844-9f3b-698e6a7f3720" name="projetoestudo" nativeTerm="database" physicalName="projetoestudo" >
+   </catalog>
+   <catalog id="CAT31" populated="false" UUID="06e32bcc-5850-48b1-933e-65554e15a215" name="sakila" nativeTerm="database" physicalName="sakila" >
+   </catalog>
+   <catalog id="CAT32" populated="false" UUID="acf9bb70-c5d0-4567-a9e1-4e1921fdcee3" name="sucos" nativeTerm="database" physicalName="sucos" >
+   </catalog>
+   <catalog id="CAT33" populated="false" UUID="c07693f9-8f26-400a-88bb-b7fa4fe96197" name="sys" nativeTerm="database" physicalName="sys" >
+   </catalog>
+   <catalog id="CAT34" populated="false" UUID="eea474e0-6c10-42cf-bb60-41df8a3caf77" name="venda_sucos" nativeTerm="database" physicalName="venda_sucos" >
+   </catalog>
+   <catalog id="CAT35" populated="false" UUID="8d22bcfe-3e27-43e0-b3d6-21df7f6b11c3" name="world" nativeTerm="database" physicalName="world" >
+   </catalog>
+   <relationships>
+   </relationships>
+  </database>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <relationships>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>

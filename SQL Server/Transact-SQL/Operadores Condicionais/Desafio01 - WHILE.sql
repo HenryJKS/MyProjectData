@@ -1,0 +1,20 @@
+/* Como podemos fazer um script que, a partir do dia 01/01/2017, 
+conte o número de notas fiscais até o dia 10/01/2017 e, 
+além disso, imprima a data e o número de notas fiscais? */
+
+DECLARE
+@DATAINICIAL DATE,
+@DATAFINAL DATE,
+@NUMNOTAS INT;
+
+SET @DATAINICIAL = '2017-01-01';
+SET @DATAFINAL = '2017-01-10';
+
+
+WHILE @DATAINICIAL <= @DATAFINAL
+	BEGIN
+		SELECT @NUMNOTAS = COUNT(*) FROM [NOTAS FISCAIS]
+			WHERE DATA = @DATAINICIAL
+		PRINT CONVERT(VARCHAR(10), @DATAINICIAL) + ' NUMNOTAS: ' + CONVERT(VARCHAR(10), @NUMNOTAS)
+		SELECT @DATAINICIAL = DATEADD(DAY, 1, @DATAINICIAL)
+	END;

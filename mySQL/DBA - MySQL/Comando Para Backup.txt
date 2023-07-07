@@ -1,0 +1,6 @@
+cd\
+cd "Program Files"
+cd "MySQL"
+cd "Mysql Server 8.0"
+cd "bin"
+mysqldump -uroot -p --databases nomedatabela > localdobackup

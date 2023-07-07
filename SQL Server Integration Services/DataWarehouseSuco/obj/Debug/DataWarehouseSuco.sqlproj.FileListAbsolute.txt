@@ -1,0 +1,12 @@
+E:\ProjetosVisualStudioSQL\DataWarehouseSuco\DataWarehouseSuco\bin\Debug\DataWarehouseSuco.dacpac
+E:\ProjetosVisualStudioSQL\DataWarehouseSuco\DataWarehouseSuco\bin\Debug\DataWarehouseSuco.dll
+E:\ProjetosVisualStudioSQL\DataWarehouseSuco\DataWarehouseSuco\bin\Debug\DataWarehouseSuco.pdb
+E:\ProjetosVisualStudioSQL\DataWarehouseSuco\DataWarehouseSuco\obj\Debug\DataWarehouseSuco.sqlproj.AssemblyReference.cache
+E:\ProjetosVisualStudioSQL\DataWarehouseSuco\DataWarehouseSuco\obj\Debug\DataWarehouseSuco.dll
+E:\ProjetosVisualStudioSQL\DataWarehouseSuco\DataWarehouseSuco\obj\Debug\DataWarehouseSuco.pdb
+E:\ProjetosVisualStudioSQL\DataWarehouseSucos\DataWarehouseSuco\bin\Debug\DataWarehouseSuco.dacpac
+E:\ProjetosVisualStudioSQL\DataWarehouseSucos\DataWarehouseSuco\bin\Debug\DataWarehouseSuco.dll
+E:\ProjetosVisualStudioSQL\DataWarehouseSucos\DataWarehouseSuco\bin\Debug\DataWarehouseSuco.pdb
+E:\ProjetosVisualStudioSQL\DataWarehouseSucos\DataWarehouseSuco\obj\Debug\DataWarehouseSuco.sqlproj.AssemblyReference.cache
+E:\ProjetosVisualStudioSQL\DataWarehouseSucos\DataWarehouseSuco\obj\Debug\DataWarehouseSuco.dll
+E:\ProjetosVisualStudioSQL\DataWarehouseSucos\DataWarehouseSuco\obj\Debug\DataWarehouseSuco.pdb

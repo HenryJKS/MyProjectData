@@ -1,0 +1,35 @@
+-- Procedure Desafio 01
+-- um relatório com dados de vendas, por datas, olhando pela perspectiva destes novos departamentos.
+-- Criar uma tabela para receber os sabores e classificar
+
+IF OBJECT_ID('DBO.faturamentoDepartamento') IS NOT NULL
+DROP PROCEDURE faturamentoDepartamento
+
+CREATE PROCEDURE faturamentoDepartamento (@DATAINICIAL DATE, @DATAFINAL DATE)
+AS
+BEGIN
+	DECLARE 
+	@DEPARTAMENTO TABLE(SABOR VARCHAR(20), DEPARTAMENTO VARCHAR(20))
+
+	INSERT INTO @DEPARTAMENTO 
+	SELECT DISTINCT SABOR, 'FRUTAS NÃO CITRICAS' AS DEPARTAMENTO
+	FROM [TABELA DE PRODUTOS]
+	WHERE SABOR IN('Açai','Cereja','Cereja/Maça','Maça','Manga','Maracujá','Melância')
+	UNION
+	SELECT DISTINCT SABOR, 'FRUTAS CITRICAS' AS DEPARTAMENTO
+	FROM [TABELA DE PRODUTOS]
+	WHERE SABOR IN('Laranja','Uva','Limão','Morango','Morango/Limão','Lima/Limão')
+
+	SELECT D.DEPARTAMENTO, SUM(A.QUANTIDADE * A.PREÇO) 'FATURAMENTO'
+	FROM [ITENS NOTAS FISCAIS] A
+	INNER JOIN [NOTAS FISCAIS] B
+	ON A.NUMERO = B.NUMERO
+	INNER JOIN [TABELA DE PRODUTOS] C
+	ON C.[CODIGO DO PRODUTO] = A.[CODIGO DO PRODUTO]
+	INNER JOIN @DEPARTAMENTO D
+	ON D.SABOR = C.SABOR
+	WHERE B.DATA BETWEEN @DATAINICIAL AND @DATAFINAL
+	GROUP BY D.DEPARTAMENTO
+END;
+
+exec faturamentoDepartamento '2016-01-01','2016-01-15';

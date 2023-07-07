@@ -1,0 +1,13 @@
+/* No Oracle SQL precisamos usar o EXTRACT para extrair somente um tempo determinado */
+
+/* Função Year */
+SELECT HIRE_DATE FROM EMPLOYEES
+WHERE EXTRACT(YEAR FROM HIRE_DATE) = 1999;
+
+/* Função Month */
+SELECT HIRE_DATE FROM EMPLOYEES
+WHERE EXTRACT(MONTH FROM HIRE_DATE) = 05;
+
+/* Função Day */
+SELECT HIRE_DATE FROM EMPLOYEES
+WHERE EXTRACT(DAY FROM HIRE_DATE) = 12;

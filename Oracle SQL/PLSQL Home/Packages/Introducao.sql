@@ -1,0 +1,16 @@
+-- Introdução Package
+-- Package é um objeto de esquema que agrupa de forma logicamente relacionada: Programas ou subprogramas em PL/SQL, variáveis, constantes, cursores
+-- ou excecoes 
+
+-- Dando privilégios de acessos para user_app, somente procedures
+GRANT EXECUTE ON ATUALIZAR_CLI_SEG_MERCADO TO user_app;
+GRANT EXECUTE ON ATUALIZAR_FATURAMENTO_PREVISTO TO user_app;
+GRANT EXECUTE ON EXCLUIR_CLIENTE TO user_app;
+GRANT EXECUTE ON INCLUIR_CLIENTE TO user_app;
+GRANT SELECT ON CLIENTE TO USER_APP;
+GRANT EXECUTE ON INCLUINDO_PRODUTO TO USER_APP;
+GRANT EXECUTE ON INCLUINDO_DADOS_VENDA TO USER_APP;
+GRANT SELECT ON PRODUTO_EXERCICIO TO USER_APP;
+GRANT SELECT ON PRODUTO_VENDA_EXERCICIO TO USER_APP;
+
+INSERT INTO CLIENTE VALUES (5, 'PADARIA XYZW', '22/222', 1, TO_DATE('15/01/2022', 'DD/MM/YYYY'), 80000, 'MEDIO GRANDE');

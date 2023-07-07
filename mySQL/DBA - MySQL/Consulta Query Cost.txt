@@ -1,0 +1,9 @@
+cd \
+cd Program Files
+cd Mysql
+cd Mysql Server 8.0
+cd bin
+mysql -u root -p
+<password>
+
+EXPLAIN FORMAT = JSON 'QUERY' \G

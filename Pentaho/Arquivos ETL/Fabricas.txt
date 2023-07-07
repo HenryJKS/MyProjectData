@@ -1,0 +1,4 @@
+CodigoFabrica,DescritorFabrica
+001,Fábrica do Rio de Janeiro
+002,Fábrica de São Paulo
+003,Fábrica de Minas Gerais
