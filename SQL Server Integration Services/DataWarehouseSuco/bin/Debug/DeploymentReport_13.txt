@@ -1,0 +1,19 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Fato_001].[Unidade_Venida] is being dropped, data loss could occur.
+
+** User actions
+     Alter
+       [dbo].[Fato_001] (Table)
+
+** Supporting actions
+
+The compatibility level of the target schema 160 is not supported, which may result in undefined behavior. Please upgrade to a later version which supports this compatibility level.
+The column [dbo].[Fato_001].[Unidade_Venida] is being dropped, data loss could occur.
+

@@ -1,0 +1,41 @@
+-- Exercicio 
+-- Cap4
+
+DECLARE
+VI NUMBER(3,1) := 1;
+VF NUMBER(3,1) := 10;
+
+BEGIN
+    FOR I IN VI..VF  LOOP
+    DBMS_OUTPUT.PUT_LINE(I);
+    END LOOP;
+END;
+/
+
+-- Ordem decrescente
+
+DECLARE
+VI NUMBER(3,1) := 1;
+VF NUMBER(3,1) := 10;
+
+BEGIN
+    FOR I IN REVERSE VI..VF  LOOP
+    DBMS_OUTPUT.PUT_LINE(I);
+    END LOOP;
+END;
+/
+
+-- Somente Pares
+
+DECLARE
+VI NUMBER(3,1) := 1;
+VF NUMBER(3,1) := 10;
+I VARCHAR(1) := 'X';
+BEGIN
+    FOR I IN REVERSE VI..VF  LOOP
+    IF MOD(I, 2) = 0 THEN
+        DBMS_OUTPUT.PUT_LINE(I);
+    END IF;
+    END LOOP;
+END;
+/

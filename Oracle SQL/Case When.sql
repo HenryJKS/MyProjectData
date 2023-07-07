@@ -1,0 +1,10 @@
+-- CASE WHEN, você pode criar uma condição com os valores que você possui e retornar uma classificação para esses dados --
+
+SELECT NOME, LIMITE_DE_CREDITO,
+(CASE 
+    WHEN LIMITE_DE_CREDITO >= 150000 THEN 'CLIENTES GRANDES'
+    WHEN LIMITE_DE_CREDITO BETWEEN 110000 AND 150000 THEN 'CLIENTES MEDIOS'
+    ELSE 'CLIENTES PEQUENOS'
+END) "CLASS"
+FROM TABELA_DE_CLIENTES;
+

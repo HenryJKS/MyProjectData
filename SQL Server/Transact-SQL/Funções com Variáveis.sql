@@ -1,0 +1,18 @@
+-- Usando funções no comando Print
+
+DECLARE
+@CPF VARCHAR(50),
+@NOME VARCHAR(100),
+@DATA_NASCIMENTO DATE,
+@IDADE INT,
+@SAIDA VARCHAR(200);
+
+SET @CPF = '2600586709';
+
+SELECT @NOME = NOME, @DATA_NASCIMENTO = [DATA DE NASCIMENTO], @IDADE = IDADE from [TABELA DE CLIENTES]
+WHERE CPF = @CPF;
+
+SET @SAIDA = 'O primeiro nome é ' + @NOME + ' cujo o CPF é ' + @CPF + ', 
+			  corresponde a ' + SUBSTRING(@NOME, 1, CHARINDEX(' ', @NOME) - 1);
+
+PRINT @SAIDA;

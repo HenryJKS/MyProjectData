@@ -1,0 +1,32 @@
+-- Procedure
+-- Conta os numeros de notas e o faturamento total de um CPF em um determinado Ano
+-- As 2 Varíaveis que recebem valores na Procedures e queremos que esse valores saem da Procedures
+-- usamos OUTPUT	
+
+ALTER PROCEDURE RetornaValoresFaturamento (
+@CPF VARCHAR(12) = '19290992743',
+@ANO INT = 2017,
+@NUMNOTAS INT OUTPUT,
+@FATURAMENTO FLOAT OUTPUT
+)
+AS
+BEGIN
+	SELECT @NUMNOTAS = COUNT(*) FROM [NOTAS FISCAIS]
+	WHERE CPF = @CPF AND YEAR(DATA) = @ANO
+
+	SELECT @FATURAMENTO = ROUND(SUM(A.QUANTIDADE * A.PREÇO),2)
+	FROM [ITENS NOTAS FISCAIS] A
+	INNER JOIN [NOTAS FISCAIS] B
+	ON A.NUMERO = B.NUMERO
+	WHERE B.CPF = @CPF AND YEAR(B.DATA) = @ANO
+
+END;
+
+DECLARE @NUMNOTAS INT, @FATURAMENTO FLOAT;
+
+
+EXEC RetornaValoresFaturamento @CPF = DEFAULT, @ANO = DEFAULT, @NUMNOTAS = @NUMNOTAS OUTPUT, @FATURAMENTO = @FATURAMENTO OUTPUT
+SELECT @NUMNOTAS, @FATURAMENTO
+
+
+
