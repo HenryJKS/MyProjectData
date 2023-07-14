@@ -1,7 +1,7 @@
 <h1 align="center">OLÁ 👋 , eu sou Henry</h1><h3 align="center">Aqui está um pouco do meu conhecimento através de códigos e sempre adquirindo mais conhecimentos</h3>
 
 
-- 📄 Atualmente Estudando sobre **Data Engineer / Data Analytics / Data Science / Data Warehouse / DBA** 
+- 📄 Atualmente Estudando sobre **Data Engineer / Data Analytics / Data Science / Data Warehouse / DBA / Blockchain** 
 - 📫 Contato **henryjooji30@gmail.com**
 - 🔧 Ferramentas usadas: **SSIS / Pentaho / mySQL Workbench / SQL Server Management Studio / SQL Developer / Power BI**
 - 💻✔️ **Oracle SQL / mySQL / SQL Server / MDX**
